@@ -6,20 +6,16 @@ import Industries from "@/components/Industries";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <Hero />
       <Solutions />
-      <About />
+      <About className="bg-[#0e3156]" />
       <Industries />
       <FAQ />
       <Contact />
-      <Footer />
-    </div>
-  );
+      <Footer className="bg-[#0e3156]" />
+    </div>;
 };
-
 export default Index;

@@ -13,7 +13,7 @@ const Hero = () => {
       });
     }
   };
-  return <section className="relative min-h-screen flex items-center justify-center bg-secondary pt-20">
+  return <section className="relative min-h-screen flex items-center justify-center pt-20 bg-[#0e3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div ref={ref} className={`max-w-4xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">

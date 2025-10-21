@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 const Index = () => {
   return <div className="min-h-screen">
-      <Navigation />
+      <Navigation className="bg-[#0e3156]" />
       <Hero />
       <Solutions />
       <About className="bg-[#0e3156]" />

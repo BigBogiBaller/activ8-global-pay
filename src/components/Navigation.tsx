@@ -23,12 +23,12 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
-              About Us
-            </button>
+          <div className="hidden md:flex items-center gap-8 ml-auto">
             <button onClick={() => scrollToSection("solutions")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
               Solutions
+            </button>
+            <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
+              About Us
             </button>
             <button onClick={() => scrollToSection("industries")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
               Industries
@@ -50,11 +50,11 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
-                About Us
-              </button>
               <button onClick={() => scrollToSection("solutions")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
                 Solutions
+              </button>
+              <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
+                About Us
               </button>
               <button onClick={() => scrollToSection("industries")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
                 Industries

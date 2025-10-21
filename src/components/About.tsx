@@ -1,5 +1,5 @@
-import { TrendingUp } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import growthGraph from "@/assets/growth-graph.png";
 
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -34,7 +34,7 @@ const About = () => {
           </div>
           <div className="flex items-center justify-center">
             <div className="bg-primary/20 backdrop-blur-sm p-12 rounded-2xl border border-primary/30">
-              <TrendingUp className="w-48 h-48 text-primary-foreground" strokeWidth={1.5} />
+              <img src={growthGraph} alt="Business Growth" className="w-64 h-auto" />
             </div>
           </div>
         </div>

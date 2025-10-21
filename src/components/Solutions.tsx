@@ -48,8 +48,8 @@ const Solutions = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-accent/20 rounded-lg">
-                  <solution.icon className="w-8 h-8 text-accent-foreground" />
+                <div className="p-3 bg-emerald-500/10 rounded-lg">
+                  <solution.icon className="w-8 h-8 text-emerald-500" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-card-foreground mb-3">

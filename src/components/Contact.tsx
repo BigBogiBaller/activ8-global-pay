@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -77,6 +77,23 @@ const Contact = () => {
                     className="text-primary hover:underline"
                   >
                     @activ8pay
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <Linkedin className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">LinkedIn</h3>
+                  <a 
+                    href="https://www.linkedin.com/company/activ8pay/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Activ8Pay
                   </a>
                 </div>
               </div>

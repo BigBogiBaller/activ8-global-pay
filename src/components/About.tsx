@@ -5,7 +5,7 @@ const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section id="about" className="py-20 bg-secondary">
+    <section id="about" className="py-20 bg-[#0E3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div 
           ref={ref}

@@ -8,14 +8,14 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 const Index = () => {
   return <div className="min-h-screen">
-      <Navigation className="bg-[#0e3156]" />
+      <Navigation />
       <Hero />
       <Solutions />
-      <About className="bg-[#0e3156]" />
+      <About />
       <Industries />
       <FAQ />
       <Contact />
-      <Footer className="bg-[#0e3156]" />
+      <Footer />
     </div>;
 };
 export default Index;

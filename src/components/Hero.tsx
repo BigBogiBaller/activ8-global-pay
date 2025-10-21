@@ -23,7 +23,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 max-w-2xl">
             Secure payment processing solutions for acquirers, banks and merchants.
           </p>
-          <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#b3cbb9]">
+          <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
             Get Started
           </Button>
         </div>

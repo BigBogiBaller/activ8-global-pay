@@ -18,7 +18,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo & Company Name */}
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Activ8Pay" className="h-16 w-auto" />
+            <img src={logo} alt="Activ8Pay" className="h-24 w-auto" />
             
           </div>
 

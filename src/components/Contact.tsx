@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Mail, Send } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +34,12 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div 
+          ref={ref}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Contact Us

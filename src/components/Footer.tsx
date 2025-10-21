@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 const Footer = () => {
   return <footer className="bg-secondary py-12 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Activ8Pay" className="h-8 w-auto" />
+            <img src={logo} alt="Activ8Pay" className="h-16 w-auto" />
             
           </div>
           
           <div className="flex items-center gap-6 text-sm text-primary-foreground/80">
             <span>©2024 Activ8Pay</span>
-            <a href="#" className="hover:text-accent transition-colors">
+            <Link to="/privacy-policy" className="hover:text-accent transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-accent transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-accent transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

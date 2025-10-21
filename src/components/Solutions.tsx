@@ -1,4 +1,5 @@
 import { CreditCard, Building2, Shield, Coins } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
   {
@@ -24,17 +25,27 @@ const solutions = [
 ];
 
 const Solutions = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section id="solutions" className="py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">
+        <h2 
+          ref={ref}
+          className={`text-4xl md:text-5xl font-bold text-foreground mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           Our Solutions
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow"
+              className={`bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-all duration-1000 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-accent/20 rounded-lg">

@@ -1,10 +1,18 @@
 import { TrendingUp } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section id="about" className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div 
+          ref={ref}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               About Us

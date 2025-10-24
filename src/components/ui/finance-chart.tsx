@@ -128,8 +128,7 @@ const ComponentLogic = ({
           x={(d) => dateScale(getDate(d)) ?? 0}
           y={(d) => stockValueScale(getStockValue(d)) ?? 0}
           yScale={stockValueScale}
-          strokeWidth={1}
-          stroke="url(#area-gradient)"
+          strokeWidth={0}
           fill="url(#area-gradient)"
           curve={curveMonotoneX}
         />

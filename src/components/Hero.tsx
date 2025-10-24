@@ -121,8 +121,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 bg-[#0e3156] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-4 md:pb-20 bg-[#0e3156] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8 md:py-20">
         <div
           ref={ref}
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 relative ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
@@ -207,7 +207,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[800px] mt-10 md:mt-28">
+          <div className="relative w-full h-[600px] md:h-[800px] mt-10 md:mt-28">
             <Globe className="top-0 max-w-[1200px]" />
           </div>
         </div>

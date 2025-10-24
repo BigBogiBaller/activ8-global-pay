@@ -8,8 +8,9 @@ const About = () => {
 
   useEffect(() => {
     const updateDimensions = () => {
-      const width = Math.min(600, window.innerWidth - 100);
-      const height = 400;
+      const isMobile = window.innerWidth < 768;
+      const width = isMobile ? Math.min(400, window.innerWidth - 48) : Math.min(600, window.innerWidth - 100);
+      const height = isMobile ? 300 : 400;
       setChartDimensions({ width, height });
     };
 

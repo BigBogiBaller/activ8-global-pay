@@ -5,17 +5,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Mail, Send, Linkedin } from "lucide-react";
-
 const Contact = () => {
-  const { toast } = useToast();
-  const { ref, isVisible } = useScrollAnimation();
+  const {
+    toast
+  } = useToast();
+  const {
+    ref,
+    isVisible
+  } = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -24,22 +27,19 @@ const Contact = () => {
     setTimeout(() => {
       toast({
         title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We'll get back to you as soon as possible."
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
       setIsSubmitting(false);
     }, 1000);
   };
-
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div 
-          ref={ref}
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
+        <div ref={ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Contact Us
@@ -55,10 +55,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a 
-                    href="mailto:solutions@activ8pay.com"
-                    className="text-primary hover:underline"
-                  >
+                  <a href="mailto:solutions@activ8pay.com" className="text-primary hover:underline">
                     solutions@activ8pay.com
                   </a>
                 </div>
@@ -70,12 +67,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Telegram</h3>
-                  <a 
-                    href="https://t.me/activ8pay"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
+                  <a href="https://t.me/activ8pay" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     @activ8pay
                   </a>
                 </div>
@@ -87,12 +79,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">LinkedIn</h3>
-                  <a 
-                    href="https://www.linkedin.com/company/activ8pay/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
+                  <a href="https://www.linkedin.com/company/activ8pay/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     Activ8Pay
                   </a>
                 </div>
@@ -106,52 +93,39 @@ const Contact = () => {
                 <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                   Name
                 </label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  placeholder="Your name"
-                />
+                <Input id="name" value={formData.name} onChange={e => setFormData({
+                ...formData,
+                name: e.target.value
+              })} required placeholder="Your name" />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
                   Email
                 </label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  placeholder="your@email.com"
-                />
+                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                ...formData,
+                email: e.target.value
+              })} required placeholder="your@email.com" />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
                   Message
                 </label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  placeholder="Tell us about your payment needs..."
-                  rows={5}
-                />
+                <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                ...formData,
+                message: e.target.value
+              })} required placeholder="Tell us about your payment needs..." rows={5} />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full">
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-[t] bg-[#328a8e]">
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

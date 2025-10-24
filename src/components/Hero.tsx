@@ -136,9 +136,15 @@ const Hero = () => {
             Secure payment processing solutions for acquirers, banks and merchants.
           </p>
           
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex justify-center mb-6" ref={div4Ref}>
+            <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
+              Get Started
+            </Button>
+          </div>
+
+          <div className="flex items-start justify-center">
             <div
-              className="relative flex h-[700px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg p-10"
+              className="relative flex h-[500px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg p-10"
               ref={containerRef}
             >
               <div className="flex size-full flex-col items-stretch justify-between gap-10">
@@ -182,12 +188,6 @@ const Hero = () => {
                     <Icons.tether />
                   </Circle>
                 </div>
-              </div>
-
-              <div ref={div4Ref} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
-                  Get Started
-                </Button>
               </div>
 
               <AnimatedBeam containerRef={containerRef} fromRef={div1Ref} toRef={div4Ref} />

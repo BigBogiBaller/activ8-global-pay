@@ -1,4 +1,4 @@
-import { CreditCard, Building2, Shield, Coins } from "lucide-react";
+import { CreditCard, Building2, Shield, Wallet, Bitcoin, Store } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
@@ -14,13 +14,23 @@ const solutions = [
   },
   {
     icon: Shield,
-    title: "Chargeback & Fraud Prevention",
-    description: "Protect your revenue with real-time alerts, automated dispute handling, and AI-driven fraud scoring. Integrated tools help you reduce chargebacks and improve approval ratios across your PSPs.",
+    title: "Chargeback & Fraud Shield",
+    description: "Prevent Fraud and Manage Chargebacks effectively",
   },
   {
-    icon: Coins,
-    title: "Stablecoin Payments",
-    description: "Send and receive USDT, USDC, or EURS instantly through compliant on/off-ramp partners. Secure, transparent, and settlement-ready for both merchants and service providers.",
+    icon: Wallet,
+    title: "Additional & Domestic Payment Methods",
+    description: "Expand your payment options with local and alternative payment methods tailored to your target markets. From instant bank transfers to digital wallets, we connect you to the right providers.",
+  },
+  {
+    icon: Bitcoin,
+    title: "Crypto Payments",
+    description: "Accept cryptocurrency payments seamlessly with our integrated crypto processing solutions. Support for Bitcoin, Ethereum, and other major cryptocurrencies with instant conversion to fiat currencies.",
+  },
+  {
+    icon: Store,
+    title: "In-Store Payment",
+    description: "Bring your payment solutions to physical locations with advanced POS systems and terminal solutions. Accept all major card types, contactless payments, and mobile wallets at your retail locations.",
   },
 ];
 

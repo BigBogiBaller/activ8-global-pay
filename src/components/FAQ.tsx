@@ -8,28 +8,32 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const faqs = [
   {
+    question: "What countries do you cover?",
+    answer: "Activ8Pay offers global coverage through its extensive network of European, UK, and US acquiring banks, as well as trusted international payment providers. Whether your business operates locally or across multiple regions, we help you connect to the right acquirer or payment partner to accept payments worldwide.",
+  },
+  {
+    question: "How fast can I start receiving payments?",
+    answer: "Once your application and due diligence documents are complete, merchant account approval can take as little as 5 to 9 business days, depending on your business type and jurisdiction. Activ8Pay assists you throughout the process: from collecting the right documentation to choosing the most suitable acquiring partner so you can start processing quickly and smoothly.",
+  },
+  {
+    question: "Who are your partners?",
+    answer: "We collaborate with a broad network of Payment Service Providers (PSPs), gateways, and acquiring banks, including several top-tier European financial institutions. Our partnerships allow us to offer tailored payment solutions for each merchant profile, from low-risk to high-risk industries, ensuring flexibility and stability.",
+  },
+  {
     question: "What industries do you support?",
-    answer: "We support a wide range of industries including e-commerce, digital goods, dating and adult, iGaming, crypto, and other high-growth verticals. Our partnerships with 25 acquiring banks allow us to provide tailored solutions for various business models.",
+    answer: "Activ8Pay works with a wide range of industries, including: eCommerce and digital goods, Subscription and SaaS businesses, Dating and adult entertainment, iGaming and betting, Crypto and fintech projects, CBD and nutraceuticals. If your industry isn't listed, feel free to contact us, we can often find a suitable acquirer or banking solution.",
   },
   {
-    question: "How fast is the onboarding process?",
-    answer: "Our onboarding process is designed to be fast and efficient. We work with top EU and US acquirers to provide quick approval times, typically within a few business days depending on your business type and documentation.",
+    question: "Do you help with banking or IBAN accounts?",
+    answer: "Yes. In addition to payment acquiring, Activ8Pay also assists businesses with corporate banking and multi-currency IBANs, allowing you to manage settlements and operational funds securely across Europe and beyond.",
   },
   {
-    question: "What payment methods do you support?",
-    answer: "We support major card networks including Visa, Mastercard, Cartes Bancaires, Amex, and JCB. Additionally, we offer stablecoin payments (USDT, USDC, EURS) and multi-currency IBAN solutions with SWIFT, SEPA, SEPA Instant, and UK Faster Payments.",
-  },
-  {
-    question: "How do you handle fraud prevention?",
-    answer: "We provide comprehensive fraud prevention through real-time alerts, automated dispute handling, and AI-driven fraud scoring. Our integrated tools help reduce chargebacks and improve approval ratios across your payment service providers.",
-  },
-  {
-    question: "Can you help with chargeback management?",
-    answer: "Yes, we offer dedicated chargeback and fraud prevention solutions with real-time alerts and automated dispute handling to protect your revenue and maintain healthy merchant accounts.",
+    question: "Do you support crypto or stablecoin payments?",
+    answer: "Absolutely. Activ8Pay offers crypto payment routes and stablecoin settlement options, giving merchants flexibility to accept or receive funds in digital currencies through regulated partners.",
   },
   {
     question: "What makes Activ8Pay different?",
-    answer: "As an ISO partnered with 25 acquiring banks including top-tier European institutions, we provide unmatched flexibility in choosing the right acquiring and banking partners. We offer personalized guidance and support to help you operate safely and scale globally.",
+    answer: "Activ8Pay stands out by combining: A network of over 25 acquiring banks, Deep industry expertise across regulated and high-growth sectors, Tailored onboarding support and documentation guidance, Access to both traditional and alternative payment methods. We're not just another payment provider — we're your strategic partner to grow and secure your payment ecosystem.",
   },
 ];
 

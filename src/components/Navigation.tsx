@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/activ8pay-logo.png";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
@@ -18,25 +18,24 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo & Company Name */}
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Activ8Pay" className="h-40 w-auto mt-8" />
-            
+            <img src={logo} alt="Activ8Pay" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 ml-auto">
-            <button onClick={() => scrollToSection("solutions")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
-              Solutions
-            </button>
-            <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
+          <div className="hidden md:flex items-center gap-8 mx-auto">
+            <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
               About Us
             </button>
-            <button onClick={() => scrollToSection("industries")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
+            <button onClick={() => scrollToSection("solutions")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
+              Solutions
+            </button>
+            <button onClick={() => scrollToSection("industries")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
               Industries
             </button>
-            <button onClick={() => scrollToSection("faq")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
+            <button onClick={() => scrollToSection("faq")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
               FAQ
             </button>
-            <button onClick={() => scrollToSection("contact")} className="text-primary-foreground hover:text-accent transition-colors font-medium">
+            <button onClick={() => scrollToSection("contact")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
               Contact Us
             </button>
           </div>
@@ -50,11 +49,11 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <button onClick={() => scrollToSection("solutions")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
-                Solutions
-              </button>
               <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
                 About Us
+              </button>
+              <button onClick={() => scrollToSection("solutions")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
+                Solutions
               </button>
               <button onClick={() => scrollToSection("industries")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-left">
                 Industries

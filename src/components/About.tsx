@@ -27,8 +27,11 @@ const About = () => {
               <p>
                 Our expertise covers a wide range of industries, from e-commerce, digital goods, dating and adult to iGaming and crypto, and other high-growth verticals. Whether your business needs a reliable acquirer, a dedicated IBAN or a robust fraud and chargeback prevention solution, Activ8Pay provides the right connections and guidance to help you operate safely and scale globally.
               </p>
+              <p>
+                Because every business is unique, our mission is to deliver tailored payment solutions that bring peace of mind and enable scalable growth.
+              </p>
               <p className="font-semibold">
-                Our mission is to make payments widely and quickly accessible, safely processed, and strategically optimized so.. Ready to Activ8 and grow your business?
+                Are you ready to Activ8 and grow your business?
               </p>
             </div>
           </div>

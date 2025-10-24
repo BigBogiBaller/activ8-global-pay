@@ -127,8 +127,8 @@ const Hero = () => {
           ref={ref}
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 relative ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          {/* Animated Beam Background */}
-          <div className="absolute inset-0 top-0 flex items-start justify-center pointer-events-none">
+          {/* Animated Beam Background - Hidden on mobile */}
+          <div className="hidden md:block absolute inset-0 top-0 pointer-events-none">
             <div
               className="relative flex h-[700px] w-full max-w-5xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}
@@ -207,7 +207,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[800px] mt-10">
+          <div className="relative w-full h-[800px] mt-10 md:mt-28">
             <Globe className="top-0 max-w-[1200px]" />
           </div>
         </div>

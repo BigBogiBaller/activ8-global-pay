@@ -125,26 +125,12 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div
           ref={ref}
-          className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          className={`max-w-4xl mx-auto text-center transition-all duration-1000 relative ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Your Bridge To
-            <br />
-            Secure And Stable Payments
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 mx-auto">
-            Secure payment processing solutions for acquirers, banks and merchants.
-          </p>
-          
-          <div className="flex justify-center mb-6" ref={div4Ref}>
-            <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
-              Get Started
-            </Button>
-          </div>
-
-          <div className="flex items-start justify-center">
+          {/* Animated Beam Background */}
+          <div className="absolute inset-0 -top-40 flex items-start justify-center pointer-events-none">
             <div
-              className="relative flex h-[500px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg p-10"
+              className="relative flex h-[700px] w-full max-w-5xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}
             >
               <div className="flex size-full flex-col items-stretch justify-between gap-10">
@@ -200,6 +186,24 @@ const Hero = () => {
               <AnimatedBeam containerRef={containerRef} fromRef={div9Ref} toRef={div4Ref} />
               <AnimatedBeam containerRef={containerRef} fromRef={div10Ref} toRef={div4Ref} />
               <AnimatedBeam containerRef={containerRef} fromRef={div11Ref} toRef={div4Ref} />
+            </div>
+          </div>
+
+          {/* Text Content - Overlays the animated beam */}
+          <div className="relative z-10">
+            <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+              Your Bridge To
+              <br />
+              Secure And Stable Payments
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 mx-auto">
+              Secure payment processing solutions for acquirers, banks and merchants.
+            </p>
+            
+            <div className="flex justify-center mb-6" ref={div4Ref}>
+              <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
+                Get Started
+              </Button>
             </div>
           </div>
 

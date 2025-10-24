@@ -207,7 +207,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[800px] -mt-20">
+          <div className="relative w-full h-[800px] mt-10">
             <Globe className="top-0 max-w-[1200px]" />
           </div>
         </div>

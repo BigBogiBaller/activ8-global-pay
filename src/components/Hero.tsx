@@ -132,13 +132,13 @@ const Hero = () => {
             <br />
             Secure And Stable Payments
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 mx-auto">
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 mx-auto">
             Secure payment processing solutions for acquirers, banks and merchants.
           </p>
           
-          <div className="flex items-center justify-center mb-12">
+          <div className="flex items-center justify-center mb-4">
             <div
-              className="relative flex h-[600px] w-full max-w-4xl items-center justify-center overflow-hidden rounded-lg p-10"
+              className="relative flex h-[700px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg p-10"
               ref={containerRef}
             >
               <div className="flex size-full flex-col items-stretch justify-between gap-10">

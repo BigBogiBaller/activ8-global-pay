@@ -11,8 +11,8 @@ const Index = () => {
   return <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <About />
       <Solutions />
+      <About />
       <Industries />
       <WhyActiv8 />
       <FAQ />

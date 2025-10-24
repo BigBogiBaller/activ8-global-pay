@@ -1,8 +1,22 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import growthGraph from "@/assets/growth-graph.png";
+import { Component as FinanceChart } from "@/components/ui/finance-chart";
+import { useState, useEffect } from "react";
 
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [chartDimensions, setChartDimensions] = useState({ width: 600, height: 400 });
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = Math.min(600, window.innerWidth - 100);
+      const height = 400;
+      setChartDimensions({ width, height });
+    };
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
   
   return (
     <section id="about" className="py-20 bg-[#0E3156]">
@@ -36,8 +50,8 @@ const About = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="bg-primary/20 backdrop-blur-sm p-12 rounded-2xl border border-primary/30">
-              <img src={growthGraph} alt="Business Growth" className="w-64 h-auto" />
+            <div className="bg-primary/20 backdrop-blur-sm p-8 rounded-2xl border border-primary/30">
+              <FinanceChart width={chartDimensions.width} height={chartDimensions.height} />
             </div>
           </div>
         </div>

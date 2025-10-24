@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Globe } from "@/components/ui/globe";
+import { AnimatedBeam } from "@/components/ui/animated-beam";
 
 const Hero = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -29,13 +30,14 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 mx-auto">
             Secure payment processing solutions for acquirers, banks and merchants.
           </p>
-          <div className="relative z-10">
-            <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
+          <div className="relative z-10 mb-12">
+            <AnimatedBeam />
+            <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e] relative z-20">
               Get Started
             </Button>
           </div>
-          <div className="relative w-full h-[400px] mt-8">
-            <Globe className="top-0" />
+          <div className="relative w-full h-[600px] -mt-20">
+            <Globe className="top-0 max-w-[900px]" />
           </div>
         </div>
       </div>

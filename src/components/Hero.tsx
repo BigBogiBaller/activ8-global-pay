@@ -4,7 +4,6 @@ import { Globe } from "@/components/ui/globe";
 import { AnimatedBeam } from "@/components/ui/animated-beam-new";
 import { useRef, forwardRef } from "react";
 import { cn } from "@/lib/utils";
-import { CreditCard, Building2, Shield, Wallet, Bitcoin, Store } from "lucide-react";
 
 const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(
   ({ className, children }, ref) => {
@@ -12,7 +11,7 @@ const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React
       <div
         ref={ref}
         className={cn(
-          "z-10 flex size-16 items-center justify-center rounded-full border-2 border-emerald-500/50 bg-[#0e3156]/80 backdrop-blur-sm p-3 shadow-[0_0_20px_-5px_rgba(16,185,129,0.5)]",
+          "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
           className,
         )}
       >
@@ -24,16 +23,93 @@ const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React
 
 Circle.displayName = "Circle";
 
+const Icons = {
+  googlePay: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-N6PA5ERHWpG7dr7LzWyJMeVyX6UdW0.png"
+      alt="Google Pay"
+      className="w-full h-full object-contain"
+    />
+  ),
+  cb: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xtpAdZxAIreunOcFjyQURL5dttmrQo.png"
+      alt="CB"
+      className="w-full h-full object-contain"
+    />
+  ),
+  jcb: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lfj63ZzdidF00vhNbLQQ8JSqttraih.png"
+      alt="JCB"
+      className="w-full h-full object-contain"
+    />
+  ),
+  mastercard: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wfrfGy2dGZCEoWMLbCGy1l7Ez7uuj8.png"
+      alt="Mastercard"
+      className="w-full h-full object-contain"
+    />
+  ),
+  visa: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-C80vCprkt0gB4jXHChpo8tcWxv7IYI.png"
+      alt="Visa"
+      className="w-full h-full object-contain"
+    />
+  ),
+  applePay: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ITG8kqnxufjjLThR8kisrnKzQWJ2H2.png"
+      alt="Apple Pay"
+      className="w-full h-full object-contain"
+    />
+  ),
+  sepa: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kFiuV3ByaCtyjQvZ9VBHj0PURFcDhi.png"
+      alt="SEPA"
+      className="w-full h-full object-contain"
+    />
+  ),
+  amex: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-iNxZZhUI8xZUqN09vn3S9dyhi0gGdO.png"
+      alt="American Express"
+      className="w-full h-full object-contain"
+    />
+  ),
+  usdc: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DjwDzxMZvBrxgo54paORo8CyZwsgvM.png"
+      alt="USDC"
+      className="w-full h-full object-contain"
+    />
+  ),
+  tether: () => (
+    <img
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1zKEaWPChug31ZPdACCqoCCRmvmFHc.png"
+      alt="Tether"
+      className="w-full h-full object-contain"
+    />
+  ),
+};
+
 const Hero = () => {
   const { ref, isVisible } = useScrollAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
   const div2Ref = useRef<HTMLDivElement>(null);
   const div3Ref = useRef<HTMLDivElement>(null);
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
   const div6Ref = useRef<HTMLDivElement>(null);
+  const div7Ref = useRef<HTMLDivElement>(null);
+  const div8Ref = useRef<HTMLDivElement>(null);
+  const div9Ref = useRef<HTMLDivElement>(null);
+  const div10Ref = useRef<HTMLDivElement>(null);
+  const div11Ref = useRef<HTMLDivElement>(null);
 
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -60,47 +136,71 @@ const Hero = () => {
             Secure payment processing solutions for acquirers, banks and merchants.
           </p>
           
-          <div 
-            ref={containerRef}
-            className="relative w-full max-w-2xl mx-auto h-[300px] mb-12"
-          >
-            {/* Payment method icons positioned around the button */}
-            <Circle ref={div1Ref} className="absolute top-0 left-[10%]">
-              <CreditCard className="w-8 h-8 text-emerald-500" />
-            </Circle>
-            <Circle ref={div2Ref} className="absolute top-0 right-[10%]">
-              <Building2 className="w-8 h-8 text-emerald-500" />
-            </Circle>
-            <Circle ref={div3Ref} className="absolute bottom-0 left-[10%]">
-              <Shield className="w-8 h-8 text-emerald-500" />
-            </Circle>
-            <Circle ref={div4Ref} className="absolute bottom-0 right-[10%]">
-              <Wallet className="w-8 h-8 text-emerald-500" />
-            </Circle>
-            <Circle ref={div5Ref} className="absolute top-[50%] left-0 -translate-y-1/2">
-              <Bitcoin className="w-8 h-8 text-emerald-500" />
-            </Circle>
-            <Circle ref={div6Ref} className="absolute top-[50%] right-0 -translate-y-1/2">
-              <Store className="w-8 h-8 text-emerald-500" />
-            </Circle>
-
-            {/* Center button with ref */}
-            <div 
-              ref={buttonRef}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+          <div className="flex items-center justify-center mb-12">
+            <div
+              className="relative flex h-[600px] w-full max-w-4xl items-center justify-center overflow-hidden rounded-lg p-10"
+              ref={containerRef}
             >
-              <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
-                Get Started
-              </Button>
-            </div>
+              <div className="flex size-full flex-col items-stretch justify-between gap-10">
+                <div className="flex flex-row items-center justify-between">
+                  <Circle ref={div1Ref}>
+                    <Icons.cb />
+                  </Circle>
+                  <Circle ref={div5Ref}>
+                    <Icons.mastercard />
+                  </Circle>
+                </div>
+                <div className="flex flex-row items-center justify-between">
+                  <Circle ref={div8Ref}>
+                    <Icons.jcb />
+                  </Circle>
+                  <Circle ref={div10Ref}>
+                    <Icons.applePay />
+                  </Circle>
+                </div>
+                <div className="flex flex-row items-center justify-between">
+                  <Circle ref={div2Ref}>
+                    <Icons.googlePay />
+                  </Circle>
+                  <Circle ref={div6Ref}>
+                    <Icons.visa />
+                  </Circle>
+                </div>
+                <div className="flex flex-row items-center justify-between">
+                  <Circle ref={div9Ref}>
+                    <Icons.amex />
+                  </Circle>
+                  <Circle ref={div11Ref}>
+                    <Icons.usdc />
+                  </Circle>
+                </div>
+                <div className="flex flex-row items-center justify-between">
+                  <Circle ref={div3Ref}>
+                    <Icons.sepa />
+                  </Circle>
+                  <Circle ref={div7Ref}>
+                    <Icons.tether />
+                  </Circle>
+                </div>
+              </div>
 
-            {/* Animated beams connecting icons to button */}
-            <AnimatedBeam containerRef={containerRef} fromRef={div1Ref} toRef={buttonRef} />
-            <AnimatedBeam containerRef={containerRef} fromRef={div2Ref} toRef={buttonRef} />
-            <AnimatedBeam containerRef={containerRef} fromRef={div3Ref} toRef={buttonRef} />
-            <AnimatedBeam containerRef={containerRef} fromRef={div4Ref} toRef={buttonRef} />
-            <AnimatedBeam containerRef={containerRef} fromRef={div5Ref} toRef={buttonRef} />
-            <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={buttonRef} />
+              <div ref={div4Ref} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">
+                  Get Started
+                </Button>
+              </div>
+
+              <AnimatedBeam containerRef={containerRef} fromRef={div1Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div2Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div3Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div5Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div7Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div8Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div9Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div10Ref} toRef={div4Ref} />
+              <AnimatedBeam containerRef={containerRef} fromRef={div11Ref} toRef={div4Ref} />
+            </div>
           </div>
 
           <div className="relative w-full h-[800px] -mt-20">

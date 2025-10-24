@@ -128,7 +128,7 @@ const Hero = () => {
           className={`max-w-4xl mx-auto text-center transition-all duration-1000 relative ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           {/* Animated Beam Background */}
-          <div className="absolute inset-0 -top-40 flex items-start justify-center pointer-events-none">
+          <div className="absolute inset-0 top-0 flex items-start justify-center pointer-events-none">
             <div
               className="relative flex h-[700px] w-full max-w-5xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}

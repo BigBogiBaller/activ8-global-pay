@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/activ8pay-logo.png";
+import logo from "@/assets/activ8pay-logo-new.png";
 const Footer = () => {
   return <footer className="bg-[#0E3156] py-12 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

@@ -1,23 +1,8 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Component as FinanceChart } from "@/components/ui/finance-chart";
-import { useState, useEffect } from "react";
+import aboutIllustration from "@/assets/about-illustration.png";
 
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const [chartDimensions, setChartDimensions] = useState({ width: 600, height: 400 });
-
-  useEffect(() => {
-    const updateDimensions = () => {
-      const isMobile = window.innerWidth < 768;
-      const width = isMobile ? Math.min(400, window.innerWidth - 48) : Math.min(600, window.innerWidth - 100);
-      const height = isMobile ? 300 : 400;
-      setChartDimensions({ width, height });
-    };
-
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
   
   return (
     <section id="about" className="py-20 bg-[#0E3156]">
@@ -51,9 +36,11 @@ const About = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="bg-primary/20 backdrop-blur-sm p-8 rounded-2xl border border-primary/30">
-              <FinanceChart width={chartDimensions.width} height={chartDimensions.height} />
-            </div>
+            <img 
+              src={aboutIllustration} 
+              alt="Quality Assurance and Testing" 
+              className="w-full max-w-md h-auto"
+            />
           </div>
         </div>
       </div>

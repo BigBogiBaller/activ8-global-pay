@@ -196,9 +196,6 @@ const Hero = () => {
               <br />
               Secure And Stable Payments
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 mx-auto">
-              Secure payment processing solutions for acquirers, banks and merchants.
-            </p>
             
             <div className="flex justify-center mb-6" ref={div4Ref}>
               <Button variant="hero" onClick={scrollToContact} className="text-slate-200 bg-[#328a8e]">

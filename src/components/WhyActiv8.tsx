@@ -14,15 +14,15 @@ const WhyActiv8 = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-[#0E3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 
           ref={ref}
-          className={`text-4xl md:text-5xl font-bold text-foreground mb-16 text-center transition-all duration-1000 ${
+          className={`text-4xl md:text-5xl font-bold text-primary-foreground mb-16 text-left transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          Why Activ8
+          Why Activ8Pay
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason, index) => (

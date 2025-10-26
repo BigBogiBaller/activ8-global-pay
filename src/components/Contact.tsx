@@ -37,49 +37,49 @@ const Contact = () => {
       setIsSubmitting(false);
     }, 1000);
   };
-  return <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-[#0E3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               Contact Us
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-primary-foreground/90 mb-8">
               Get in touch to learn more about our payment solutions
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-primary" />
+                <div className="p-3 bg-emerald-500/10 rounded-lg">
+                  <Mail className="w-6 h-6 text-emerald-500" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:solutions@activ8pay.com" className="text-primary hover:underline">
+                  <h3 className="font-semibold text-primary-foreground mb-1">Email</h3>
+                  <a href="mailto:solutions@activ8pay.com" className="text-emerald-500 hover:underline">
                     solutions@activ8pay.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Send className="w-6 h-6 text-primary" />
+                <div className="p-3 bg-emerald-500/10 rounded-lg">
+                  <Send className="w-6 h-6 text-emerald-500" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Telegram</h3>
-                  <a href="https://t.me/activ8pay" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <h3 className="font-semibold text-primary-foreground mb-1">Telegram</h3>
+                  <a href="https://t.me/activ8pay" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:underline">
                     @activ8pay
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Linkedin className="w-6 h-6 text-primary" />
+                <div className="p-3 bg-emerald-500/10 rounded-lg">
+                  <Linkedin className="w-6 h-6 text-emerald-500" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">LinkedIn</h3>
-                  <a href="https://www.linkedin.com/company/activ8pay/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <h3 className="font-semibold text-primary-foreground mb-1">LinkedIn</h3>
+                  <a href="https://www.linkedin.com/company/activ8pay/" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:underline">
                     Activ8Pay
                   </a>
                 </div>

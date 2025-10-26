@@ -143,7 +143,7 @@ const Hero = () => {
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
-                  <Circle ref={div8Ref}>
+                  <Circle ref={div8Ref} className="p-0">
                     <Icons.jcb />
                   </Circle>
                   <Circle ref={div10Ref}>
@@ -159,7 +159,7 @@ const Hero = () => {
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
-                  <Circle ref={div9Ref}>
+                  <Circle ref={div9Ref} className="p-0">
                     <Icons.amex />
                   </Circle>
                   <Circle ref={div11Ref}>

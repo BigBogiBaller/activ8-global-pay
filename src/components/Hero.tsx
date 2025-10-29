@@ -130,7 +130,7 @@ const Hero = () => {
           {/* Animated Beam Background - Hidden on mobile */}
           <div className="hidden md:block absolute inset-0 top-0 pointer-events-none">
             <div
-              className="relative flex h-[900px] w-full max-w-5xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
+              className="relative flex h-[1100px] w-full max-w-6xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}
             >
               <div className="flex size-full flex-col items-stretch justify-between gap-10">
@@ -204,7 +204,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[800px] md:h-[800px] mt-8 md:mt-12 -mb-32 md:mb-0">
+          <div className="relative w-full h-[800px] md:h-[800px] mt-4 md:mt-6 -mb-32 md:mb-0">
             <Globe 
               className="top-0 max-w-[1200px]" 
               config={{

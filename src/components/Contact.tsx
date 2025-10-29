@@ -18,24 +18,28 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible."
-      });
-      setFormData({
-        name: "",
-        email: "",
-        message: ""
-      });
-      setIsSubmitting(false);
-    }, 1000);
+    
+    // Create mailto link with pre-filled data
+    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    const mailtoLink = `mailto:solutions@activ8pay.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form and show confirmation
+    toast({
+      title: "Opening email app...",
+      description: "Your email client will open with the message pre-filled."
+    });
+    
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
   };
   return <section id="contact" className="py-20 bg-[#0E3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -119,8 +123,8 @@ const Contact = () => {
               })} required placeholder="Tell us about your payment needs..." rows={5} />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full bg-[t] bg-[#328a8e]">
-                {isSubmitting ? "Sending..." : "Send Message"}
+              <Button type="submit" className="w-full bg-[t] bg-[#328a8e]">
+                Send Message
               </Button>
             </form>
           </div>

@@ -17,12 +17,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center h-20">
           {/* Logo & Company Name */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ml-20">
             <img src={logo} alt="Activ8Pay" className="h-32 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 flex-1 justify-center -ml-32">
+          <div className="hidden md:flex items-center gap-8 flex-1 justify-end mr-8">
             <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
               About Us
             </button>

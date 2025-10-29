@@ -130,7 +130,7 @@ const Hero = () => {
           {/* Animated Beam Background - Hidden on mobile */}
           <div className="hidden md:block absolute inset-0 top-0 pointer-events-none">
             <div
-              className="relative flex h-[1100px] w-full max-w-6xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
+              className="relative flex h-[1100px] w-full max-w-7xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}
             >
               <div className="flex size-full flex-col items-stretch justify-between gap-16">

@@ -22,7 +22,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 flex-1 justify-end mr-8">
+          <div className="hidden md:flex items-center gap-8 flex-1 justify-end mr-32">
             <button onClick={() => scrollToSection("about")} className="text-primary-foreground hover:text-accent transition-colors font-medium text-lg">
               About Us
             </button>

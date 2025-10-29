@@ -130,7 +130,7 @@ const Hero = () => {
           {/* Animated Beam Background - Hidden on mobile */}
           <div className="hidden md:block absolute inset-0 top-0 pointer-events-none">
             <div
-              className="relative flex h-[700px] w-full max-w-5xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
+              className="relative flex h-[900px] w-full max-w-5xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}
             >
               <div className="flex size-full flex-col items-stretch justify-between gap-10">
@@ -204,8 +204,37 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[800px] md:h-[800px] mt-12 md:mt-40 -mb-32 md:mb-0">
-            <Globe className="top-0 max-w-[1200px]" />
+          <div className="relative w-full h-[800px] md:h-[800px] mt-8 md:mt-12 -mb-32 md:mb-0">
+            <Globe 
+              className="top-0 max-w-[1200px]" 
+              config={{
+                width: 800,
+                height: 800,
+                onRender: () => {},
+                devicePixelRatio: 2,
+                phi: 0,
+                theta: 0.3,
+                dark: 0,
+                diffuse: 0.4,
+                mapSamples: 16000,
+                mapBrightness: 1.2,
+                baseColor: [0.196, 0.541, 0.557],
+                markerColor: [0.196, 0.541, 0.557],
+                glowColor: [0.196, 0.541, 0.557],
+                markers: [
+                  { location: [14.5995, 120.9842], size: 0.03 },
+                  { location: [19.076, 72.8777], size: 0.1 },
+                  { location: [23.8103, 90.4125], size: 0.05 },
+                  { location: [30.0444, 31.2357], size: 0.07 },
+                  { location: [39.9042, 116.4074], size: 0.08 },
+                  { location: [-23.5505, -46.6333], size: 0.1 },
+                  { location: [19.4326, -99.1332], size: 0.1 },
+                  { location: [40.7128, -74.006], size: 0.1 },
+                  { location: [34.6937, 135.5022], size: 0.05 },
+                  { location: [41.0082, 28.9784], size: 0.06 },
+                ],
+              }}
+            />
           </div>
         </div>
       </div>

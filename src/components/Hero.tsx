@@ -158,7 +158,7 @@ const Hero = () => {
                     <Icons.visa />
                   </Circle>
                 </div>
-                <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-row items-center justify-between gap-32">
                   <Circle ref={div9Ref} className="p-0">
                     <Icons.amex />
                   </Circle>

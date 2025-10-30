@@ -17,7 +17,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center h-20">
           {/* Logo & Company Name */}
-          <div className="flex items-center gap-3 ml-40">
+          <div className="flex items-center gap-3 ml-4 md:ml-40">
             <img src={logo} alt="Activ8Pay" className="h-32 w-auto" />
           </div>
 

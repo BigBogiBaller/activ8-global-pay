@@ -204,7 +204,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full h-[800px] md:h-[800px] mt-0 md:mt-0 -mb-32 md:mb-0">
+          <div className="relative w-full h-[800px] md:h-[800px] -mt-8 md:-mt-12 -mb-32 md:mb-0">
             <Globe 
               className="top-0 max-w-[1200px]" 
               config={{

@@ -63,7 +63,7 @@ const Icons = {
     <img
       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ITG8kqnxufjjLThR8kisrnKzQWJ2H2.png"
       alt="Apple Pay"
-      className="w-full h-full object-contain scale-110"
+      className="w-full h-full object-contain scale-95"
     />
   ),
   sepa: () => (
@@ -206,10 +206,10 @@ const Hero = () => {
 
           <div className="relative w-full h-[800px] md:h-[800px] -mt-8 md:-mt-12 -mb-32 md:mb-0">
             <Globe 
-              className="top-0 max-w-[900px]" 
+              className="top-0 max-w-[800px]" 
               config={{
-                width: 600,
-                height: 600,
+                width: 550,
+                height: 550,
                 onRender: () => {},
                 devicePixelRatio: 2,
                 phi: 0,

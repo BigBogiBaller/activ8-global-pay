@@ -63,7 +63,7 @@ const Icons = {
     <img
       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ITG8kqnxufjjLThR8kisrnKzQWJ2H2.png"
       alt="Apple Pay"
-      className="w-full h-full object-contain scale-150"
+      className="w-full h-full object-contain scale-110"
     />
   ),
   sepa: () => (
@@ -220,7 +220,7 @@ const Hero = () => {
                 mapBrightness: 1.2,
                 baseColor: [0.2, 0.4, 0.8],
                 markerColor: [0.2, 0.8, 0.3],
-                glowColor: [1, 0.5, 0],
+                glowColor: [0.2, 0.4, 0.8],
                 markers: [
                   { location: [14.5995, 120.9842], size: 0.03 },
                   { location: [19.076, 72.8777], size: 0.1 },

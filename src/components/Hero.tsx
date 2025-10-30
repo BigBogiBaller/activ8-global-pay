@@ -63,7 +63,7 @@ const Icons = {
     <img
       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ITG8kqnxufjjLThR8kisrnKzQWJ2H2.png"
       alt="Apple Pay"
-      className="w-full h-full object-contain"
+      className="w-full h-full object-contain scale-150"
     />
   ),
   sepa: () => (
@@ -77,7 +77,7 @@ const Icons = {
     <img
       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-iNxZZhUI8xZUqN09vn3S9dyhi0gGdO.png"
       alt="American Express"
-      className="w-full h-full object-contain"
+      className="w-full h-full object-contain scale-150"
     />
   ),
   usdc: () => (
@@ -146,7 +146,7 @@ const Hero = () => {
                   <Circle ref={div8Ref} className="p-0">
                     <Icons.jcb />
                   </Circle>
-                  <Circle ref={div10Ref} className="size-20">
+                  <Circle ref={div10Ref}>
                     <Icons.applePay />
                   </Circle>
                 </div>
@@ -159,7 +159,7 @@ const Hero = () => {
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between gap-96">
-                  <Circle ref={div9Ref} className="p-0 size-20">
+                  <Circle ref={div9Ref} className="p-0">
                     <Icons.amex />
                   </Circle>
                   <Circle ref={div11Ref}>

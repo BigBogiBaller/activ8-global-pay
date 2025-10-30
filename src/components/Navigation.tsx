@@ -13,13 +13,20 @@ const Navigation = () => {
       setIsMenuOpen(false);
     }
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0E3156] backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center h-20">
           {/* Logo & Company Name */}
-          <div className="flex items-center gap-3 ml-4 md:ml-40">
+          <button onClick={scrollToTop} className="flex items-center gap-3 ml-4 md:ml-40">
             <img src={logo} alt="Activ8Pay" className="h-32 w-auto" />
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8 flex-1 justify-end mr-48">

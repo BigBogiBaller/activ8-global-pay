@@ -146,7 +146,7 @@ const Hero = () => {
                   <Circle ref={div8Ref} className="p-0">
                     <Icons.jcb />
                   </Circle>
-                  <Circle ref={div10Ref}>
+                  <Circle ref={div10Ref} className="size-20">
                     <Icons.applePay />
                   </Circle>
                 </div>
@@ -159,7 +159,7 @@ const Hero = () => {
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between gap-96">
-                  <Circle ref={div9Ref} className="p-0">
+                  <Circle ref={div9Ref} className="p-0 size-20">
                     <Icons.amex />
                   </Circle>
                   <Circle ref={div11Ref}>
@@ -206,10 +206,10 @@ const Hero = () => {
 
           <div className="relative w-full h-[800px] md:h-[800px] -mt-8 md:-mt-12 -mb-32 md:mb-0">
             <Globe 
-              className="top-0 max-w-[1200px]" 
+              className="top-0 max-w-[900px]" 
               config={{
-                width: 800,
-                height: 800,
+                width: 600,
+                height: 600,
                 onRender: () => {},
                 devicePixelRatio: 2,
                 phi: 0,
@@ -218,9 +218,9 @@ const Hero = () => {
                 diffuse: 0.4,
                 mapSamples: 16000,
                 mapBrightness: 1.2,
-                baseColor: [0.196, 0.541, 0.557],
-                markerColor: [0.196, 0.541, 0.557],
-                glowColor: [0.196, 0.541, 0.557],
+                baseColor: [0.2, 0.4, 0.8],
+                markerColor: [0.2, 0.8, 0.3],
+                glowColor: [1, 0.5, 0],
                 markers: [
                   { location: [14.5995, 120.9842], size: 0.03 },
                   { location: [19.076, 72.8777], size: 0.1 },

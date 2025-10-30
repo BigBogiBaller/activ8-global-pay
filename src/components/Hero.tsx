@@ -133,7 +133,7 @@ const Hero = () => {
               className="relative flex h-[1100px] w-full max-w-6xl items-start justify-center overflow-hidden rounded-lg p-10 pt-0"
               ref={containerRef}
             >
-              <div className="flex size-full flex-col items-stretch justify-between gap-16">
+              <div className="flex size-full flex-col items-stretch justify-between gap-10">
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div1Ref}>
                     <Icons.cb />

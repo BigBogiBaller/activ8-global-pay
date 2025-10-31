@@ -218,7 +218,7 @@ const Hero = () => {
                 diffuse: 0.4,
                 mapSamples: 16000,
                 mapBrightness: 1.2,
-                baseColor: [0.2, 0.4, 0.8],
+                baseColor: [0.1, 0.6, 0.2],
                 markerColor: [0.2, 0.8, 0.3],
                 glowColor: [0.2, 0.4, 0.8],
                 markers: [

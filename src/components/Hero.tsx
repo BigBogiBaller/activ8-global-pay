@@ -207,10 +207,10 @@ const Hero = () => {
 
           <div className="relative w-full h-[800px] md:h-[800px] -mt-8 md:-mt-12 -mb-32 md:mb-0">
             <Globe 
-              className="top-0 max-w-[700px]" 
+              className="top-0 max-w-[600px]" 
               config={{
-                width: 500,
-                height: 500,
+                width: 450,
+                height: 450,
                 onRender: () => {},
                 devicePixelRatio: 2,
                 phi: 0,

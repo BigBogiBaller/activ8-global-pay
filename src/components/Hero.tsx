@@ -64,7 +64,7 @@ const Icons = {
     <img
       src={applePayLogo}
       alt="Apple Pay"
-      className="w-full h-full object-contain scale-[1.8]"
+      className="w-full h-full object-contain scale-[2.5]"
     />
   ),
   sepa: () => (

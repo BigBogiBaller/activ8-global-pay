@@ -4,6 +4,7 @@ import { Globe } from "@/components/ui/globe";
 import { AnimatedBeam } from "@/components/ui/animated-beam-new";
 import { useRef, forwardRef } from "react";
 import { cn } from "@/lib/utils";
+import applePayLogo from "@/assets/apple-pay-logo.png";
 
 const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(
   ({ className, children }, ref) => {
@@ -61,7 +62,7 @@ const Icons = {
   ),
   applePay: () => (
     <img
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ITG8kqnxufjjLThR8kisrnKzQWJ2H2.png"
+      src={applePayLogo}
       alt="Apple Pay"
       className="w-full h-full object-contain scale-95"
     />
@@ -194,7 +195,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
               Your Bridge To
               <br />
-              Secure And Stable Payments
+              Secure and Stable Payments
             </h1>
             
             <div className="flex justify-center mb-6" ref={div4Ref}>
@@ -206,10 +207,10 @@ const Hero = () => {
 
           <div className="relative w-full h-[800px] md:h-[800px] -mt-8 md:-mt-12 -mb-32 md:mb-0">
             <Globe 
-              className="top-0 max-w-[800px]" 
+              className="top-0 max-w-[700px]" 
               config={{
-                width: 550,
-                height: 550,
+                width: 500,
+                height: 500,
                 onRender: () => {},
                 devicePixelRatio: 2,
                 phi: 0,
@@ -220,7 +221,7 @@ const Hero = () => {
                 mapBrightness: 1.2,
                 baseColor: [0.2, 0.4, 0.8],
                 markerColor: [1, 0.5, 0],
-                glowColor: [0.2, 0.4, 0.8],
+                glowColor: [0.76, 0.87, 1.0],
                 markers: [
                   { location: [14.5995, 120.9842], size: 0.03 },
                   { location: [19.076, 72.8777], size: 0.1 },

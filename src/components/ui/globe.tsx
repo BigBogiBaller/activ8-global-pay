@@ -41,11 +41,11 @@ export function Globe({
   config?: COBEOptions
 }) {
   let phi = 0
-  let width = 0
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const pointerInteracting = useRef(null)
   const pointerInteractionMovement = useRef(0)
   const [r, setR] = useState(0)
+  const [width, setWidth] = useState(0)
 
   const updatePointerInteraction = (value: any) => {
     pointerInteracting.current = value
@@ -69,12 +69,12 @@ export function Globe({
       state.width = width * 2
       state.height = width * 2
     },
-    [r],
+    [r, width],
   )
 
   const onResize = () => {
     if (canvasRef.current) {
-      width = canvasRef.current.offsetWidth
+      setWidth(canvasRef.current.offsetWidth)
     }
   }
 
@@ -82,25 +82,43 @@ export function Globe({
     window.addEventListener("resize", onResize)
     onResize()
 
-    if (!canvasRef.current) return
-
-    const globe = createGlobe(canvasRef.current, {
-      ...config,
-      width: width * 2,
-      height: width * 2,
-      onRender,
-    })
-
-    setTimeout(() => {
-      if (canvasRef.current) {
-        canvasRef.current.style.opacity = "1"
-      }
-    })
     return () => {
-      globe.destroy()
       window.removeEventListener("resize", onResize)
     }
-  }, [onRender, config])
+  }, [])
+
+  useEffect(() => {
+    if (!canvasRef.current || width === 0) return
+
+    let globe: any
+
+    try {
+      globe = createGlobe(canvasRef.current, {
+        ...config,
+        width: width * 2,
+        height: width * 2,
+        onRender,
+      })
+
+      setTimeout(() => {
+        if (canvasRef.current) {
+          canvasRef.current.style.opacity = "1"
+        }
+      }, 100)
+    } catch (error) {
+      console.error("Failed to initialize globe:", error)
+    }
+
+    return () => {
+      if (globe) {
+        try {
+          globe.destroy()
+        } catch (error) {
+          console.error("Failed to destroy globe:", error)
+        }
+      }
+    }
+  }, [width, onRender, config])
 
   return (
     <div

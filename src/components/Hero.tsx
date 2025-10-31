@@ -219,7 +219,7 @@ const Hero = () => {
                 mapSamples: 16000,
                 mapBrightness: 1.2,
                 baseColor: [0.2, 0.4, 0.8],
-                markerColor: [0.2, 0.8, 0.3],
+                markerColor: [1, 0.5, 0],
                 glowColor: [0.2, 0.4, 0.8],
                 markers: [
                   { location: [14.5995, 120.9842], size: 0.03 },

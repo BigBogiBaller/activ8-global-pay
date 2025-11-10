@@ -39,7 +39,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Activ8Pay Contact <onboarding@resend.dev>",
-      to: ["bgd.media.official@gmail.com"],
+      to: ["charles.baudin@gmail.com"],
       reply_to: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `

@@ -18,6 +18,18 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+        
+        <div className="mt-8 text-center text-sm text-primary-foreground/60">
+          Made By{" "}
+          <a 
+            href="https://bogdanlekic.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-semibold hover:text-accent transition-colors"
+          >
+            Bogi
+          </a>
+        </div>
       </div>
     </footer>;
 };

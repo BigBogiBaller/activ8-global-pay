@@ -92,24 +92,34 @@ export function Globe({
 
     let globe: any
 
-    try {
-      globe = createGlobe(canvasRef.current, {
-        ...config,
-        width: width * 2,
-        height: width * 2,
-        onRender,
-      })
+    // Small delay to ensure canvas is fully mounted and WebGL context is available
+    const timer = setTimeout(() => {
+      if (!canvasRef.current) return
+      
+      try {
+        globe = createGlobe(canvasRef.current, {
+          ...config,
+          width: width * 2,
+          height: width * 2,
+          onRender,
+        })
 
-      setTimeout(() => {
+        setTimeout(() => {
+          if (canvasRef.current) {
+            canvasRef.current.style.opacity = "1"
+          }
+        }, 100)
+      } catch (error) {
+        console.error("Failed to initialize globe:", error)
+        // Show canvas anyway so layout isn't broken
         if (canvasRef.current) {
           canvasRef.current.style.opacity = "1"
         }
-      }, 100)
-    } catch (error) {
-      console.error("Failed to initialize globe:", error)
-    }
+      }
+    }, 200)
 
     return () => {
+      clearTimeout(timer)
       if (globe) {
         try {
           globe.destroy()

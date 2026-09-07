@@ -18,7 +18,6 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

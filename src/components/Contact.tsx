@@ -26,7 +26,7 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    const mailtoLink = `mailto:solutions@activ8pay.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:charles@activ8pay.com?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoLink;
 

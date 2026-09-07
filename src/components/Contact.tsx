@@ -123,8 +123,8 @@ const Contact = () => {
               })} required placeholder="Tell us about your payment needs..." rows={5} />
               </div>
 
-              <Button type="submit" className="w-full bg-[#328a8e]" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Message"}
+              <Button type="submit" className="w-full bg-[#328a8e]">
+                Send Message
               </Button>
             </form>
           </div>

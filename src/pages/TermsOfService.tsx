@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Terms of Service | Activ8Pay"
+        description="The terms and conditions that apply when you access or use Activ8Pay's website and payment processing services."
+        path="/terms-of-service"
+      />
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20">
         <Link to="/">
           <Button variant="ghost" className="mb-8">

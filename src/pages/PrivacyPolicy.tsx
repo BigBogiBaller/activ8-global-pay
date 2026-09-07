@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Privacy Policy | Activ8Pay"
+        description="How Activ8Pay collects, uses, stores and protects personal information of visitors and clients of our payment processing services."
+        path="/privacy-policy"
+      />
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20">
         <Link to="/">
           <Button variant="ghost" className="mb-8">

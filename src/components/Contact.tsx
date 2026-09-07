@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { supabase } from "@/integrations/supabase/client";
 import { Mail, Send, Linkedin } from "lucide-react";
 const Contact = () => {
   const {

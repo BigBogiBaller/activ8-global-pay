@@ -48,7 +48,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden ml-auto text-primary-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button aria-label={isMenuOpen ? "Close menu" : "Menu"} aria-expanded={isMenuOpen} className="md:hidden ml-auto text-primary-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

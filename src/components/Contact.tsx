@@ -18,6 +18,7 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [emailLink, setEmailLink] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,20 +29,15 @@ const Contact = () => {
     );
     const mailtoLink = `mailto:charles@activ8pay.com?subject=${subject}&body=${body}`;
 
+    setEmailLink(mailtoLink);
     window.location.href = mailtoLink;
 
     toast({
-      title: "Email client opened",
-      description: "Send the pre-filled email to complete your message.",
-    });
-
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
+      title: "Your email is ready",
+      description: "Send it from your email app. If it didn’t open, tap Open Email App below.",
     });
   };
-  return <section id="contact" className="py-20 bg-[#0E3156]">
+  return <section id="contact" className="py-20 scroll-mt-20 bg-[#0E3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div>
@@ -91,13 +87,13 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg border border-border">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="min-w-0 bg-card p-5 sm:p-8 rounded-lg border border-border">
+            <form onSubmit={handleSubmit} onChange={() => setEmailLink(null)} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                   Name
                 </label>
-                <Input id="name" value={formData.name} onChange={e => setFormData({
+                <Input id="name" name="name" autoComplete="name" className="min-h-11" value={formData.name} onChange={e => setFormData({
                 ...formData,
                 name: e.target.value
               })} required placeholder="Your name" />
@@ -107,7 +103,7 @@ const Contact = () => {
                 <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
                   Email
                 </label>
-                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                <Input id="email" name="email" type="email" autoComplete="email" inputMode="email" autoCapitalize="none" autoCorrect="off" className="min-h-11" value={formData.email} onChange={e => setFormData({
                 ...formData,
                 email: e.target.value
               })} required placeholder="your@email.com" />
@@ -117,15 +113,20 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
                   Message
                 </label>
-                <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                <Textarea id="message" name="message" className="text-base md:text-sm" value={formData.message} onChange={e => setFormData({
                 ...formData,
                 message: e.target.value
               })} required placeholder="Tell us about your payment needs..." rows={5} />
               </div>
 
-              <Button type="submit" className="w-full bg-[#328a8e]">
+              <Button type="submit" className="w-full min-h-11 bg-[#328a8e]">
                 Send Message
               </Button>
+              {emailLink && (
+                <Button asChild variant="outline" className="w-full min-h-11">
+                  <a href={emailLink}><Mail aria-hidden="true" />Open Email App</a>
+                </Button>
+              )}
             </form>
           </div>
         </div>

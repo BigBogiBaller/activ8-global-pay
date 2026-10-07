@@ -1,5 +1,6 @@
 import { ShoppingCart, Heart, GraduationCap, Gamepad2, TrendingUp, Plane } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 
 const industries = [
   { icon: ShoppingCart, name: "e-Commerce & Online Retail" },
@@ -30,7 +31,10 @@ const Industries = () => {
           }`}
           style={{ transitionDelay: '100ms' }}
         >
-          From traditional e-commerce to emerging sectors, we provide tailored payment solutions across diverse industries.
+          From traditional e-commerce to emerging sectors, we provide tailored payment solutions across diverse industries.{" "}
+          <Link to="/high-risk-merchant-account" className="text-primary font-semibold hover:underline">
+            Learn about high risk merchant accounts
+          </Link>
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {industries.map((industry, index) => (

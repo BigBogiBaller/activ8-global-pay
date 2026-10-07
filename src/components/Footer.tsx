@@ -8,7 +8,7 @@ const Footer = () => {
             <img src={logo} alt="Activ8Pay" className="h-32 w-auto" />
           </div>
           
-          <div className="flex items-center gap-6 text-sm text-primary-foreground/80">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-primary-foreground/80">
             <span>©2024 Activ8Pay</span>
             <Link to="/high-risk-merchant-account" className="hover:text-accent transition-colors">
               High Risk Merchant Accounts

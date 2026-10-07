@@ -10,6 +10,9 @@ const Footer = () => {
           
           <div className="flex items-center gap-6 text-sm text-primary-foreground/80">
             <span>©2024 Activ8Pay</span>
+            <Link to="/high-risk-merchant-account" className="hover:text-accent transition-colors">
+              High Risk Merchant Accounts
+            </Link>
             <Link to="/privacy-policy" className="hover:text-accent transition-colors">
               Privacy Policy
             </Link>

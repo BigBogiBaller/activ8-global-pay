@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Mail, Send, Linkedin } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 const Contact = () => {
   const {
     toast
@@ -19,23 +20,25 @@ const Contact = () => {
     message: ""
   });
   const [emailLink, setEmailLink] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const subject = encodeURIComponent(`New Contact Form Submission from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:charles@activ8pay.com?subject=${subject}&body=${body}`;
-
-    setEmailLink(mailtoLink);
-    window.location.href = mailtoLink;
-
-    toast({
-      title: "Your email is ready",
-      description: "Send it from your email app. If it didn’t open, tap Open Email App below.",
+    setSending(true);
+    const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      body: formData,
     });
+    setSending(false);
+    if (error || (data as any)?.error) {
+      toast({
+        title: "Message could not be sent",
+        description: "Please try again or email charles@activ8pay.com directly.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setFormData({ name: "", email: "", message: "" });
+    toast({ title: "Message sent", description: "Thanks! We'll get back to you soon." });
   };
   return <section id="contact" className="py-20 scroll-mt-20 bg-[#0E3156]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -119,8 +122,8 @@ const Contact = () => {
               })} required placeholder="Tell us about your payment needs..." rows={5} />
               </div>
 
-              <Button type="submit" className="w-full min-h-11 bg-[#328a8e]">
-                Send Message
+              <Button type="submit" disabled={sending} className="w-full min-h-11 bg-[#328a8e]">
+                {sending ? "Sending..." : "Send Message"}
               </Button>
               {emailLink && (
                 <Button asChild variant="outline" className="w-full min-h-11">
